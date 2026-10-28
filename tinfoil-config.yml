@@ -7,7 +7,7 @@ networks:
     allow: []
 containers:
   - name: checks
-    image: ghcr.io/justinmoon/darcy-cua-check-config@sha256:180ea7d4b6c7995967e4f9259168ab5760d64d586601de5307a22bac53e41751
+    image: ghcr.io/justinmoon/darcy-cua-check-config@sha256:dfab79f2965447a2841c5e94099d23a15262865df435540e50980e2d7c4130e7
     cvm_admin: true
     user: "0:0"
     read_only: true
