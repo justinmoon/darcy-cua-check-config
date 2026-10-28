@@ -7,7 +7,7 @@ networks:
     allow: []
 containers:
   - name: checks
-    image: ghcr.io/justinmoon/darcy-cua-check-config@sha256:4bd77bac420711b1925e32a5e31e54e7c9c56c9014c03ae666c27c8ebeac02f9
+    image: ghcr.io/justinmoon/darcy-cua-check-config@sha256:6ef5e606fcc737920e1995e827df237f2f2c4733ab652fc8eae30b9492cbeac3
     cvm_admin: true
     user: "0:0"
     read_only: true
@@ -15,6 +15,7 @@ containers:
     shm_size: 512m
     networks: [checks]
     tmpfs:
+      /run: rw,nosuid,nodev,size=64m,mode=755
       /tmp: rw,nosuid,nodev,size=1g,mode=1777
       /workspace: rw,nosuid,nodev,size=2g,mode=755
 shim:
